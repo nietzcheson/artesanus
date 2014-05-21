@@ -33,6 +33,21 @@ class ajaxController extends Controller{
 			);
 		}
 	}
+
+	public function post(){
+		$this->_view->assign("titulo","AJAX Post");
+		$this->_view->setJs(array("post"));
+		//$this->_view->assign("paises",$this->_ajax->getPaises());
+		$this->_view->renderizar("post");
+	}
+
+	public function enviar(){
+
+		echo json_encode($this->getSql("id"));
+
+		return "Listo";
+
+	}
 }
 
 
