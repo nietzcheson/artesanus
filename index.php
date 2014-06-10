@@ -9,6 +9,7 @@ define("APP_PATH", ROOT . "application" . DS);
 try{
 	require_once APP_PATH . "Autoload.php";
 	require_once APP_PATH . "Config.php";
+  require_once APP_PATH . "config/rutas.php";
 	Session::init();
 	$registry = Registry::getInstancia();
 	$registry->_request = new Request();
