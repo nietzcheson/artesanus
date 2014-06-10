@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 abstract class Widget{
 
@@ -14,12 +14,12 @@ abstract class Widget{
 		}
 
 		throw new Exception("Error de modelo de widget");
-		
+
 	}
 
 	protected function render($view, $data = array(), $ext = "phtml"){
 		if(is_readable(ROOT . "widgets" . DS . "views" . DS . $view .".". $ext)){
-			
+
 			ob_start();
 			extract($data);
 			include ROOT. "widgets" . DS . "views" . DS . $view .".". $ext;
@@ -30,7 +30,7 @@ abstract class Widget{
 		}
 
 		throw new Exception("Error de vista de widget");
-		
+
 	}
 
 }

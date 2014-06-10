@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2014-05-21 23:01:18
+<?php /* Smarty version Smarty-3.1.18, created on 2014-05-26 20:20:58
          compiled from "/Applications/XAMPP/xamppfiles/htdocs/Repositorios/artesanus/views/layout/default/template.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1562185519537d141eb16f96-66389840%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dda68c8fb2aafb7fa4a4ec92761ff13ed6754eb8' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/Repositorios/artesanus/views/layout/default/template.tpl',
-      1 => 1399675281,
+      1 => 1401128453,
       2 => 'file',
     ),
   ),
@@ -15,20 +15,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_537d141ec063f0_98215372',
   'variables' => 
   array (
     'titulo' => 0,
     '_layoutParams' => 0,
     '_error' => 0,
     '_mensaje' => 0,
-    'widgets' => 0,
-    'sidebar' => 0,
     '_contenido' => 0,
     'js' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_537d141ec063f0_98215372',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_537d141ec063f0_98215372')) {function content_537d141ec063f0_98215372($_smarty_tpl) {?>﻿<!DOCTYPE html>
 <html>
@@ -40,13 +38,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 css/bootstrap.css"/>
 		<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['ruta_css'];?>
 estilos.css"/>
-		<!--<script src="<<?php ?>?php echo $_layoutParams['ruta_js']?<?php ?>>jQuery.js"></script>-->		
+		<!--<script src="<<?php ?>?php echo $_layoutParams['ruta_js']?<?php ?>>jQuery.js"></script>-->
 	</head>
 	<body>
 		<noscript>
 			Esta aplicación funcionará mucho mejor usando Javascript
 		</noscript>
-		
+
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<?php if (isset($_smarty_tpl->tpl_vars['_error']->value)) {?>
 				<div class="alert alert-danger alert-dismissable">
@@ -120,17 +118,8 @@ estilos.css"/>
 		<section>
 			<div id="wrap-contenedor">
 				<div id="contenedor">
-					<?php if (isset($_smarty_tpl->tpl_vars['widgets']->value['sidebar'])) {?>
-						<?php  $_smarty_tpl->tpl_vars['sidebar'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['sidebar']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['widgets']->value['sidebar']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['sidebar']->key => $_smarty_tpl->tpl_vars['sidebar']->value) {
-$_smarty_tpl->tpl_vars['sidebar']->_loop = true;
-?>
-							<?php echo $_smarty_tpl->tpl_vars['sidebar']->value;?>
-
-						<?php } ?>
-					<?php }?>
 					
+
 					<div class="panel panel-default wrap-contenido">
 						<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['_contenido']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -143,7 +132,7 @@ $_smarty_tpl->tpl_vars['sidebar']->_loop = true;
 			<div id="wrap-footer">
 				<div class="contenido-footer">
 					Copyright &copy <a href="https://www.artesan.us" target="_blank"><?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['configs']['app_company'];?>
-</a> 
+</a>
 				</div>
 			</div>
 		</footer>
@@ -173,4 +162,5 @@ $_smarty_tpl->tpl_vars['js']->_loop = true;
 	</body>
 </html>
 
-<<?php ?>?php ob_end_flush();?<?php ?>><?php }} ?>
+<<?php ?>?php ob_end_flush();?<?php ?>>
+<?php }} ?>

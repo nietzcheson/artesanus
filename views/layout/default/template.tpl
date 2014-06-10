@@ -5,13 +5,13 @@
 		<title>{$titulo|default:"Sin título"}</title>
 		<link rel="stylesheet" href="{$_layoutParams.ruta_bootstrap}css/bootstrap.css"/>
 		<link rel="stylesheet" href="{$_layoutParams.ruta_css}estilos.css"/>
-		<!--<script src="<?php echo $_layoutParams['ruta_js']?>jQuery.js"></script>-->		
+		<!--<script src="<?php echo $_layoutParams['ruta_js']?>jQuery.js"></script>-->
 	</head>
 	<body>
 		<noscript>
 			Esta aplicación funcionará mucho mejor usando Javascript
 		</noscript>
-		
+
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			{if isset($_error)}
 				<div class="alert alert-danger alert-dismissable">
@@ -82,12 +82,8 @@
 		<section>
 			<div id="wrap-contenedor">
 				<div id="contenedor">
-					{if isset($widgets.sidebar)}
-						{foreach item=sidebar from=$widgets.sidebar}
-							{$sidebar}
-						{/foreach}
-					{/if}
 					
+
 					<div class="panel panel-default wrap-contenido">
 						{include file=$_contenido}
 					</div>
@@ -98,7 +94,7 @@
 		<footer>
 			<div id="wrap-footer">
 				<div class="contenido-footer">
-					Copyright &copy <a href="https://www.artesan.us" target="_blank">{$_layoutParams.configs.app_company}</a> 
+					Copyright &copy <a href="https://www.artesan.us" target="_blank">{$_layoutParams.configs.app_company}</a>
 				</div>
 			</div>
 		</footer>

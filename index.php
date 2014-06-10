@@ -1,4 +1,4 @@
-﻿<?php 
+﻿<?php
 
 ini_set("display_erros", 1);
 
@@ -19,7 +19,4 @@ try{
 }catch(Exception $e){
 	echo $e->getMessage();
 }
-
-
-
 ?>

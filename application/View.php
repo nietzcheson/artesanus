@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
 require_once ROOT . "libs" . DS . "Smarty" . DS . "libs" . DS . "Smarty.class.php";
@@ -39,8 +39,8 @@ class View extends Smarty{
 
 
 	public function renderizar($vista,$item=false, $noLayout = false){
-		
-		
+
+
 
 		if($item){
 			$this->_item = $item;
@@ -56,7 +56,7 @@ class View extends Smarty{
 		if(count($this->_js)){
 			$js = $this->_js;
 		}
-		
+
 		$_params = array(
 			"ruta_css"			=>		BASE_URL . "views/layout/" . $this->_template . "/css/",
 			"ruta_img"			=>		BASE_URL . "views/layout/" . $this->_template . "/img/",
@@ -102,7 +102,7 @@ class View extends Smarty{
 			}
 		}else{
 			throw new Exception("Error de jQuery");
-			
+
 		}
 
 	}
@@ -115,7 +115,7 @@ class View extends Smarty{
 			}
 		}else{
 			throw new Exception("Error de plugin jQuery");
-			
+
 		}
 
 	}
@@ -151,7 +151,7 @@ class View extends Smarty{
 		}
 
 		throw new Exception("Error en el Widget", 1);
-		
+
 	}
 
 	public function getLayoutPositions(){
@@ -162,7 +162,7 @@ class View extends Smarty{
 		}
 
 		throw new Exception("Error configuración de Layout");
-		
+
 	}
 
 	public function getWidgets(){
