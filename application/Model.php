@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 class Model{
 
 	private $_registry;
